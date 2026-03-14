@@ -31,7 +31,7 @@ connection {
   destination = "/tmp/bootstrap.sh"
 }
 
-  provisioner "local-exec" {
+  provisioner "remote-exec" {
     inline = [
         "chmod +x /tmp/bootstrap.sh",
         "sudo sh /tmp/bootstrap.sh"
