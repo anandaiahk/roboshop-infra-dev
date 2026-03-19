@@ -19,7 +19,7 @@ resource "terraform_data" "bootstrap" {
     
     aws_instance.mongodb.id
   ]
-connection {
+  connection {
     type        = "ssh"
     user        = "ec2-user"
     password    = "DevOps321"
