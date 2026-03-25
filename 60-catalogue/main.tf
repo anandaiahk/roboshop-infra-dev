@@ -188,7 +188,7 @@ resource "aws_lb_listener_rule" "catalogue" {
     type             = "forward"
     target_group_arn = aws_lb_target_group.catalogue.arn
   }
-  depends_on = [aws_lb.backend_alb]
+  depends_on = [aws_lb_listener.http]
 
   condition {
     host_header {
